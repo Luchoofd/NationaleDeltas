@@ -1,0 +1,41 @@
+body { background: #eee }
+
+.container-fluid { max-width: 100%;
+                   margin: 20px;
+                   }
+
+.card {
+	background: #fff;
+	box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+	img {
+		width: 100%;
+	}
+}
+
+  .carousel-inner img {
+      width: 100%;
+      height: 100%;
+  }
+
+[class*="row"] {
+	justify-content: center;
+    color: black
+    background-color: black
+}
+
+[class*="col-"] {
+	background: #efefef;
+	border: 1px solid #ddd;
+	padding-top: .99rem;
+	padding-bottom: .75rem;
+	width: 100%;
+}
+
+#MekongDelta { height: 360px; 
+               width: 100%;
+}
+
+#Rijn-Maas-Schelde-Delta { height: 360px;
+                           width: 100%;
+}
+
