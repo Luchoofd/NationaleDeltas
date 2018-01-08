@@ -25,9 +25,8 @@
 <!-- Website Navigatie -->
   <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-   <img src="Images/Naamloos-1.jpg" width="60" height="60" class="d-inline-block align-top" alt="">
-  <a class="navbar-brand" href="#">Nationale Delta's</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+   <img src="Logo.jpg" width="150" height="60" class="d-inline-block align-top" alt="">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -35,30 +34,103 @@
       <a class="nav-item nav-link active" href="Index.html">Home <span class="sr-only">(current)</span></a>
       <a class="nav-item nav-link" href="Mekongdelta.html">Mekong delta</a>
       <a class="nav-item nav-link" href="Rijn-Maas-Schelde-Delta.html">Rijn-Maas-Schelde delta</a>
-      <a class="nav-item nav-link" href="Overeenkomsten.html">Overeenkomsten</a>
-      <a class="nav-item nav-link" href="Conclusies.html">Conclusies</a>
+      <a class="nav-item nav-link" href="Analyse.html">Analyse</a>
     </div>
   </div>
 </nav>
-      
+     
 <!-- leaflet kaart -->
-<div id="Rijn-Maas-Schelde-Delta"> 
+<div id="RMSDelta"> 
     <script>
-        
-        //initialize the map         
-  var map = L.map('Rijn-Maas-Schelde-Delta').setView([51.564383, 4.607710], 8);
+  //initialize the map
+  var map = L.map('RMSDelta').setView([51.888202, 4.707116], 8);
   
-        //Create baselayer - tiles         
-  var backgroundMap = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png',{
+  //Create baselayer - tiles
+  var backgroundMap = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
     attribution: '<a href="http://openstreetmap.org">OpenStreetMap</a>contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
-    maxZoom: 20
-    }
-  );
+    maxZoom: 19
+  });
   
   backgroundMap.addTo(map);
+  
+  //Add markers
+  var Rijn = L.marker([51.871410, 6.045069]).addTo(map);
+  Rijn.addTo(map);
+  
+  var Maas = L.marker([51.797900, 5.368716]);
+  Maas.addTo(map);
+  
+  var Schelde = L.marker([51.670238, 4.353824]);
+  Schelde.addTo(map);
+  
+    //Add pop-ups
+  var popup = "Rijn rivier";
+  Rijn.bindPopup(popup);
+  
+  var popup1 = "Maas rivier";
+  Maas.bindPopup(popup1);
         
-    </script>
+  var popup2 = "Op deze plek komen de rivieren samen en monden ze uit in de zee.";
+  Schelde.bindPopup(popup2);
+  
+  
+</script>
+</div>
+<!-- Tekst vakken -->
+  <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6">
+            <h4>Rijn-Maas-Schelde Delta</h4>
+            <p>De Rijn-Maas-Schelde Delta bestaat uit de rivier de Rijn, Maas en schelde. Dit gebied is economische erg voor uit strevende vanwege de achterban. Dit wil zeggen de de landen in het binnenland handel moeten drijven via de haven van deze delta’s. Natuurlijk zijn er andere mogelijkheden om transport van goederen te realiseren maar goeder transport is een van de grootse en realistische mogelijkheden.</p>
+        </div>
+        <div class="col-sm-6">
+            <img src="Rijn_Maas_Delta.jpg" class="img-responsive">
+        </div>
+        </div>
     </div>
+
+<div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6">
+             <img src="Bevolkingsdichtheid_nederland.png" class="img-responsive">
+        </div>
+        <div class="col-sm-6">
+            <p>De Rijn-Maas-Schelde heeft een groot aantal inwoners rond de rivieren wonen. Dit vanwege de geschiedenis waarin de rivier natuurlijk verschillende voordelen had en deze nog steeds heeft. Dit brengt echter ook problemen met zich mee. De zee spiegel is aan het stijgen en de piekafvoer van deze rivieren in deze delta verhoogt. Dit door verharding in het gebied en smeltwater afvoer. De Nederlandse overheid heeft daarom het programma ruimte voor de rivier gestart. Hierin worden er verschillende maatregelen genomen om de rivier meer ruimte te geven. Denk hierbij aan het uitbaggeren van de rivier of het vergroten van uiterwaarde. </p>
+           </div>
+        </div>
+    </div>
+    
+      
+<!--Footer-->
+<footer class="page-footer blue center-on-small-only">
+
+    <!--Footer Links-->
+    <div class="container-fluid">
+        <div class="row">
+
+            <!--First column-->
+            <div class="col-sm-6">
+                <h5 class="title">Nationale Delta's</h5>
+                <p>Nationale Delta's is een bedrijf opgericht door een Student aan de Hogeschool in Almere. Deze website wordt gemaakt in opdracht van de fictieve genomen National Geographic.</p>
+            </div>
+            
+            <!--Second column-->
+            <div class="col-sm-6">
+                <h5 class="title">Mail hier met u vragen en of discussiepunten</h5>
+                <form>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Email address</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Text</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+</form>
+    </div>
+    </div>
+    </div>
+</footer>
     
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
