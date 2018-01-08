@@ -34,6 +34,7 @@
     color: rgba(197,204,194,1.0);
     background-color: rgba(38,38,38,1.0);
     padding: 100px
+    
 }
 
 .footer-copyright {
@@ -51,4 +52,26 @@
 
 .body {
     background-color: rgba(197,204,194,1.0);
+}
+
+html *
+{
+   font-size: 1em !important;
+   font-family: Source Sans Pro !important;
+}
+
+.card-title {
+    font-size: 2em !important;
+    font-family: Maven Pro !important;
+}
+
+
+.title {
+    font-size: 2em !important;
+    font-family: Arial !important;
+}
+
+.h4 {
+    font-size: 2em !important;
+    font-family: Arial !important;
 }
